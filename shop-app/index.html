@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>shop app</title>
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container my-5">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="msg"></div>
+          <a href="#shop_modal" data-bs-toggle="modal" class="btn btn-primary"
+            >Add New Product</a
+          >
+          <div class="card shadow mt-3">
+            <div class="card-header bg-primary text-light">
+              <h3>Shop App</h3>
+            </div>
+            <hr />
+            <div class="card-body">
+              <table class="table table-striped shop-data">
+                <thead>
+                  <tr>
+                    <td>#</td>
+                    <td>Product Photo</td>
+                    <td>Product Name</td>
+                    <td>Price</td>
+                    <td>Quantity</td>
+                    <td>Total</td>
+                    <td>Action</td>
+                  </tr>
+                </thead>
+                <tbody id="alldatashow"></tbody>
+                <tfoot id="total">
+                  <tr>
+                    
+                    <td>Summary:</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>3</td>
+                    <td>300 BDT</td>
+                    <td></td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="prdouct-update shadow" id="product_update">
+     <div class="d-flex justify-content-between align-center">
+      <h3>Product update</h3>
+      <span id="crosss">&times;</span>
+     </div>
+      <form id="update_form_d">
+        <div class="my-1">
+          <input
+            type="hidden"
+            name="uindexx"
+            id="uindexx"
+            
+          />
+        </div>
+        <div class="my-3">
+          <input
+            class="form-control"
+            type="text"
+            name="uname"
+            id="name"
+            placeholder="Product Name"
+          />
+        </div>
+        <div class="my-3">
+          <input
+            class="form-control"
+            type="text"
+            name="uprice"
+            id="price"
+            placeholder="price"
+          />
+        </div>
+        <div class="my-3">
+          <input
+            class="form-control"
+            type="text"
+            name="uquantity"
+            id="quantity"
+            placeholder="Quantity"
+          />
+        </div>
+        <div class="my-3">
+          <input
+            class="form-control"
+            type="text"
+            name="uimage"
+            id="image"
+            placeholder="Image link"
+          />
+        </div>
+        <div class="my-3">
+          <button type="submit" class="btn btn-primary w-100">
+           
+            update
+          </button>
+        </div>
+      </form>
+    </div>
+
+
+    <div class="modal fade" id="shop_modal">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-primary text-light">
+            <h2>Add New Product</h2>
+          </div>
+          <div class="modal-body">
+            <form id="product_from">
+              <div class="my-3">
+                <input
+                  class="form-control"
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Product Name"
+                />
+              </div>
+              <div class="my-3">
+                <input
+                  class="form-control"
+                  type="text"
+                  name="price"
+                  id="price"
+                  placeholder="price"
+                />
+              </div>
+              <div class="my-3">
+                <input
+                  class="form-control"
+                  type="text"
+                  name="quantity"
+                  id="quantity"
+                  placeholder="Quantity"
+                />
+              </div>
+              <div class="my-3">
+                <input
+                  class="form-control"
+                  type="text"
+                  name="image"
+                  id="image"
+                  placeholder="Image link"
+                />
+              </div>
+              <div class="my-3">
+                <button type="submit" class="btn btn-primary w-100">
+                 
+                  Add New Product
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <div class="msg w-100"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- view item -->
+
+
+    <div class="modal fade" id="product_view">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-primary text-light">
+            <h2>Product Details</h2>
+          </div>
+          <div class="modal-body">
+            <div class="card pd">
+              
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- update data modal -->
+
+
+
+
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+    <script src="function.js"></script>
+    <script src="app.js"></script>
+   
+  </body>
+</html>
+

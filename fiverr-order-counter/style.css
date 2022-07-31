@@ -1,0 +1,16 @@
+#ordercounter .my-3 {
+  flex: 1;
+}
+#ordercounter {
+  gap: 10px;
+}
+
+.hours {
+  font-size: 24px;
+  text-transform: uppercase;
+  color: green;
+}
+.per {
+  height: 10px;
+  border-radius: 10px;
+}

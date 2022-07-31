@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alarm Clock</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <audio id="sound" src="assets/sound/alerm.mp3"></audio>
+    <audio id="resetSound" src="assets/sound/reset.mp3"></audio>
+
+    <div class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="card">
+            <p class="success-message"></p>
+            <div class="card-header p-3">
+              <form id="setTimeForm" class="d-flex justify-content-between">
+                <input class="form-control" type="time" name="time" step="1" />
+                <input
+                  class="btn btn-info w-100"
+                  type="submit"
+                  value="Set Time"
+                />
+              </form>
+            </div>
+            <div class="card-body">
+              <div class="alerm-clock">
+                <div class="alerm-clock-face">
+                  <div class="alerm-clock-hand hour-hand"></div>
+                  :
+                  <div class="alerm-clock-hand minute-hand"></div>
+                  :
+                  <div class="alerm-clock-hand second-hand"></div>
+                  <div class="alerm-clock-hand ampm"></div>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer d-flex justify-content-between">
+              <p class="time-left"></p>
+              <p class="time-reset">00:00:00</p>
+              <button id="resetTime" class="btn btn-primary">Reset Time</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/function.js"></script>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>

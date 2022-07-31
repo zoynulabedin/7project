@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto&display=swap");
+
+.alerm-clock-face {
+  display: flex;
+  justify-content: space-around;
+  font-size: 40px;
+  font-weight: 900;
+  font-family: "Orbitron", sans-serif;
+}
+.scmesg {
+  text-align: center;
+  color: green;
+  font-size: 20px;
+}
+.time-left {
+  display: none;
+}
